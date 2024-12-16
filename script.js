@@ -11,8 +11,10 @@ window.addEventListener('load', async () => {
     connectWalletButton.addEventListener('click', async () => {
         if (window.web3) {
             try {
-                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const accounts = await window.web3.eth.getAccounts();
                 console.log('Connected account:', accounts[0]);
+                alert('Wallet connected: ' + accounts[0]);
             } catch (error) {
                 console.error('Failed to connect wallet:', error);
             }
