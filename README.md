@@ -1,2 +1,2 @@
 # dapp
-repository about snaut swap dapp
+repository about Sloths nauts website dapp
