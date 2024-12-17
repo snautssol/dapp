@@ -3,8 +3,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'frontend',
+  root: '.', // Asegura que la raíz es el directorio del frontend
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'public/index.html' // Asegura que Vite busca index.html en public
+    }
   }
 });
