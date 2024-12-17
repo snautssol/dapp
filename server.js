@@ -10,7 +10,7 @@ app.get('/api', (req, res) => {
     res.send('API funcionando correctamente');
 });
 
-// Sirve la aplicación React para todas las rutas que no coincidan con /api
+// Sirve index.html en todas las rutas que no coincidan con /api
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
